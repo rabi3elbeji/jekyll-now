@@ -14,11 +14,6 @@ published: true
     margin-left: -5px;
     margin-right: -5px;
   }
-  .icondemo__item_mail {
-    width: 50%;
-    float: left;
-    padding: 0;
-  }
   .icondemo__item {
     width: 25%;
     float: left;
@@ -68,8 +63,7 @@ I'm also available on:
 <ul class="icondemo">
     <li class="icondemo__item">
       <div class="icondemo__inner">
-        <a href="callto://0021622037588"> <i class="icon icon-phone"></i></a>
-        <code>0021622037588</code>
+        <a href="tel:+21622037588"> <i class="icon icon-phone"></i></a>
       </div>
     </li>
 </ul>
@@ -78,7 +72,6 @@ I'm also available on:
     <li class="icondemo__item">
       <div class="icondemo__inner">
         <a href="skype:rabii.elbeji1?call"> <i class="icon icon-skype"></i></a>
-        <code>rabii.elbeji1</code>
       </div>
     </li>
 </ul>
@@ -88,7 +81,6 @@ I'm also available on:
     <li class="icondemo__item">
       <div class="icondemo__inner">
       <a href="{{ site.author.linkedin }}" target="_blank"><i class="icon icon-linkedin"></i></a>
-        <code>rabii-elbeji</code>
       </div>
     </li>
 </ul>
@@ -97,7 +89,6 @@ I'm also available on:
     <li class="icondemo__item">
       <div class="icondemo__inner">
       <a href="{{ site.author.twitter }}" target="_blank"><i class="icon icon-twitter"></i></a>
-        <code>rbelbeji</code>
       </div>
     </li>
 </ul>

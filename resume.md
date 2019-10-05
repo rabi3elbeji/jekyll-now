@@ -4,14 +4,66 @@ title: Resume
 permalink: /resume/
 published: true
 ---
-[Download PDF](pdf/Rabii_Elbeji_CV.pdf)
------------
-
-<img style="float: right; margin:0 10px 10px 0; max-width:15%; max-height:15%;" src="{{ site.author.qrcode | prepend: site.baseurl }}" alt="author resume">
 
 
 
-> **Experience**
+<style>
+  .icondemo {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  .icondemo__item {
+    width: 100%;
+    float: center;
+    padding: 0;
+  }
+  .icondemo__inner {
+    margin: 5px;
+    padding: 15px 10px;
+    border-radius: 6px;
+  }
+  .icondemo__item .icon {
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    transition: transform .12s linear;
+  }
+  .icondemo__item:hover .icon {
+    transform: scale(1.2)
+  }
+  .icondemo__item code {
+    display: block;
+  }
+</style>
+
+
+<ul class="icondemo">
+    <li class="icondemo__item">
+      <div class="icondemo__inner">
+      <a href="/resume-qr/" ><i class="icon icon-qrcode"></i></a>
+      <code>Get my resume by QR-Code</code>
+      </div>
+    </li>
+</ul>
+
+<ul class="icondemo">
+    <li class="icondemo__item">
+      <div class="icondemo__inner">
+      <a href="/resume/pdf/Rabii_Elbeji_CV.pdf" ><i class="icon icon-address-book"></i></a>
+      <code>Download my resume PDF</code>
+      </div>
+    </li>
+</ul>
+<br/>
+
+
+
+
+# **Experience**
 
 #### April 2018 - present  [Open Bee](https://www.openbee.com/){:target="_blank"} - Nabeul, Tunisia
 **Machine Learning Engineer | Lead Dev**
@@ -46,7 +98,7 @@ published: true
 
 **Technologies:**  `PHP`, `Java`
 
-> **Education**
+# **Education**
 
 #### Ph.D. student 2017 - Present
 * Specialty: Information technology (STIC)
