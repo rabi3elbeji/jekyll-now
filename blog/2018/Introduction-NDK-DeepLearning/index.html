@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Introduction to NDK for Android mobile apps</title>
+<meta name="description" content="">
+
+
+<meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Introduction to NDK for Android mobile apps">
+  <meta property="og:description" content="
+
+">
+  <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+
+<link rel="stylesheet" href="/css/main.css">
+<link rel="canonical" href="https://rabi3elbeji.github.io/blog/2018/Introduction-NDK-DeepLearning/">
+<link rel="alternate" type="application/rss+xml" title="Rabii Elbeji" href="https://rabi3elbeji.github.io/feed.xml" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-115439306-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <input type="checkbox" id="toggleNavbar">
+    <h1 class="logo"><a href="/">Rabii <span>ELBEJI</span></a></h1>
+    <label for="toggleNavbar" role="button" class="toggle-navbar-button">
+      <i class="icon icon-menu"></i>
+      <i class="icon icon-cross"></i>
+    </label>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/" title="Home">Home</a></li>
+        
+          <li><a href="/about" title="About">About</a></li>
+        
+          <li><a href="/blog" title="Blog">Blog</a></li>
+        
+          <li><a href="/articles" title="Articles">Articles</a></li>
+        
+          <li><a href="/resume" title="Resume">Resume</a></li>
+        
+        <li><a href="/feed.xml" target="_blank"><i class="icon icon-rss"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main class="main-container">
+  <div class="container">
+    <article role="article" class="post">
+
+  <div class="card">
+    <header class="post-header">
+      <h1 class="post-title">Introduction to NDK for Android mobile apps</h1>
+      <em class="post-meta">
+        <time>Oct 11, 2018</time>
+      </em>
+    </header>
+
+    <div class="post-content">
+      
+      <center><img src="/images/post5/ndk-intro.png" alt="Introduction to NDK for mobile apps" style="width: 700px;" /></center>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>When you try to build a high-performance and optimized game or across platform application or maybe an application with advanced and complicated AI tasks in production, you most probably choose as programming language a low level one such as <code>C</code> or <code>C++</code> . But if the platform is a mobile device, such as Android, is it still the same case of using a native language?</p>
+
+<p>Short answer: <strong>Yes!</strong></p>
+
+<p>In fact, Android apps can be categorized into two types:</p>
+<ul>
+  <li><code>Dalvik applications</code> that include <code>Java</code> code and use the Android official SDK API <strong>only</strong> and necessary resource files, such as xml and png, compiled into an APK file.</li>
+  <li><code>Android NDK applications</code> that include <code>Java</code> code and resource files as well as <code>C/C++</code> source code and sometimes assembly code. All native code is compiled into a dynamic linked library (<code>.so</code> file) and then called by Java in the main program using a JNI mechanism.</li>
+</ul>
+
+<h3 id="what-is-the-ndk-and-when-should-you-use-it">What is the NDK and when should you use it?</h3>
+
+<p>The Android Native Development Kit (<code>NDK</code>) is a companion tool to the Android SDK. The NDK is a powerful tool for developing Android applications because it allow you to build  performance-critical portions of your applications in native code. When using Java code, the Java-based source code needs to be interpreted into machine language using a virtual machine. In contrast, the native code is compiled and optimized into binary directly before execution. With proper use of native code, you can build high performance code in your application, such as hardware video encoding and decoding, graphics processing, and arithmetical operation.</p>
+
+<p>Also, the NDK Reuses legacy native code. C/C++ codes can be compiled into a dynamic library that can be called by Java code with a <code>JNI</code> mechanism. JNI is an abbreviation for Java Native Interface. It allows C++ and Java parts to talk to each other in the simplest terms. For example, if you want to call a function from C++ in Java, you should write a JNI interface for this purpose.</p>
+
+<p>If you write native code, your applications are still packaged into an .apk file and they still run inside of a virtual machine on the device. The fundamental Android application model does not change.</p>
+
+<center><img src="/images/post5/ndk-use-cases.png" alt="Android NDK use cases" style="width: 700px;" /></center>
+
+<h3 id="abi-application-binary-interface">ABI: Application Binary Interface</h3>
+
+<p>As you know, Android is distributed for a variety of devices. Each device might have a different CPU architecture. When you develop an Android application that contains C++ code, you should care about the platforms on which your application will run. The C++ code should be compiled as a library for each platform you target. You can compile the library for all the supported platforms, or you can choose to compile it for only one platform.</p>
+
+<p>You can list any subset of the ABIs the NDK supports, as shown below:</p>
+
+<pre><code class="language-gradle">android {
+    defaultConfig {
+        ndk {
+            // Tells Gradle to build outputs for the following ABIs and package
+            // them into your APK.
+             abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+}
+</code></pre>
+
+<p>When this flag is not configured, Gradle builds and packages all available ABIs.</p>
+
+<center><img src="/images/post5/abi-cpus.png" alt="ARM and Intel Mobile CPUs architectures" style="width: 700px;" /></center>
+
+<center><img src="/images/post5/supported-abi.png" alt="ABIs and supported instruction sets" style="width: 700px;" /></center>
+
+<p>To reduce the size of your APK, consider configuring multiple APKs based on ABI—instead of creating one large APK with all versions of your native libraries, Gradle creates a separate APK for each ABI you want to support and only packages the files each ABI needs.</p>
+
+<blockquote>
+  <blockquote>
+    <p><strong>Hello World project</strong></p>
+  </blockquote>
+</blockquote>
+
+<p><strong>1.</strong> <b><u>Install the NDK, CMake, and LLDB</u></b></p>
+
+<p>Under <code>Configure</code> select <code>SDK Manager</code> then check the <strong>LLDB</strong>, <strong>NDK</strong>, and <strong>CMake</strong> checkboxes.</p>
+
+<center><img src="/images/post5/helloworld/step00.png" alt="Select SDK Manager" style="width: 700px;" /></center>
+
+<center><img src="/images/post5/helloworld/step0.png" alt="Install the NDK, CMake, and LLDB from the SDK Manager" style="width: 700px;" /></center>
+
+<p><strong>2.</strong> <b><u>Start a new Android Studio project</u></b></p>
+
+<p>Open Android Studio and click <strong>Start a new Android Studio project</strong>. This will initiate the new project wizard.</p>
+
+<center><img src="/images/post5/helloworld/step1.png" alt="Start a new Android Studio project" style="width: 700px;" /></center>
+
+<p><strong>3.</strong> <b><u>Select a Native C++ project</u></b></p>
+
+<center><img src="/images/post5/helloworld/step2.png" alt="Select a Native C++ project" style="width: 700px;" /></center>
+
+<p><strong>4.</strong> <b><u>Configure Your project</u></b></p>
+
+<p>Next, give your project an application name, company domain (important when deploying your app to the Play Store and also influences your Java code namespaces), project location, and package name.</p>
+
+<center><img src="/images/post5/helloworld/step3.png" alt="Configure Your project" style="width: 700px;" /></center>
+
+<p><strong>5.</strong>  <b><u>Customize C++ support</u></b></p>
+
+<p>Determining what C++ Standard to use or when to upgrade can be tricky. The idea here is to use the C++ Standard thats most compatible your libraries, dependencies and existing source code. For this tutorial we’ll use the Toolchain Default. But future versions of your projects may use more modern C++…</p>
+
+<center><img src="/images/post5/helloworld/step4.png" alt="Configure Your project" style="width: 700px;" /></center>
+
+<p><strong>6.</strong>  <b><u>Project structure</u></b></p>
+
+<center><img src="/images/post5/helloworld/step5.png" alt="Hello World app view" style="width: 400px;" /></center>
+
+<ul>
+  <li>Native Code in <strong>native-lib.cpp</strong></li>
+</ul>
+
+<pre><code class="language-cpp">#include &lt;jni.h&gt;
+#include &lt;string&gt;
+
+extern 'C' JNIEXPORT jstring JNICALL
+Java_com_rabiielbeji_helloworld_MainActivity_stringFromJNI(
+        JNIEnv *env,
+        jobject /* this */) {
+    std::string hello = "Hello Rabii from C++";
+    return env-&gt;NewStringUTF(hello.c_str());
+ }
+</code></pre>
+
+<ul>
+  <li>Cmake file</li>
+</ul>
+
+<pre><code>cmake_minimum_required(VERSION 3.4.1)
+
+add_library( # Sets the name of the library.
+        native-lib
+
+        # Sets the library as a shared library.
+        SHARED
+
+        # Provides a relative path to your source file(s).
+        native-lib.cpp)
+</code></pre>
+
+<ul>
+  <li>Main java activity class <strong>MainActivity.java</strong></li>
+</ul>
+
+<pre><code class="language-java">// Used to load the 'native-lib' library on application startup.
+static {
+    System.loadLibrary("native-lib");
+}
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    // Example of a call to a native method
+    TextView tv = findViewById(R.id.sample_text);
+    tv.setText(stringFromJNI());
+}
+
+/**
+ * A native method that is implemented by the 'native-lib' native library,
+ * which is packaged with this application.
+ */
+public native String stringFromJNI();
+</code></pre>
+
+<p><strong>7.</strong>  <b><u>Result after running the app</u></b></p>
+
+<center><img src="/images/post5/helloworld/step6.png" alt="Hello World app view" style="width: 400px;" /></center>
+
+<blockquote>
+
+  <p><strong>CODE</strong>
+The code is available on <a href="https://github.com/rabi3elbeji/NDK_HelloWorld">NDK_HelloWorld</a></p>
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <p><strong>NDK and OpenCV for object detection</strong></p>
+  </blockquote>
+</blockquote>
+
+<p><strong>1.</strong> <b><u>What's OpenCV?</u></b></p>
+
+<p>OpenCV (Open Source Computer Vision) is a library of programming functions mainly aimed at real-time computer vision. In simple language it is library used for Image Processing. It is mainly used to do all the operation related to Images.</p>
+
+<p>It has a C++ interface and support Android :smile:</p>
+
+<p><strong>2.</strong> <b><u>OpenCV DNN module</u></b></p>
+
+<p>OpenCV DNN (Deep Neural Networks) module has been released from OpenCV 3.3 version and it’s designed for running multiple deep learning models trained from different deep learning frameworks like Caffe and TensorFlow. It supports various networks architectures based on YOLO, MobileNet-SSD, Inception-SSD, Faster-RCNN Inception,Faster-RCNN ResNet, and Mask-RCNN Inception.</p>
+
+<blockquote>
+
+  <p><strong>CODE</strong>
+Clone <a href="https://github.com/rabi3elbeji/NDK_OpenCV">NDK OpenCV</a> from github and follow usage steps</p>
+</blockquote>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>Using NDK in your applications allows them to achieve a high level of performance in terms of memory or processing time. But also, it’s not recommended to use the NDK with ordinary applications that don’t have a critical need for memory or speed performance, because Kotlin and Java are already optimized and simple to use and implement.</p>
+
+<p>In future posts, I will cover more examples of using Computer Vision and Deep-Learning with NDK.</p>
+
+<h3 id="references">References</h3>
+
+<p>1- <a href="https://software.intel.com/en-us/articles/android-application-development-and-optimization-on-the-intel-atom-platform">Android* Application Development and Optimization on the Intel® Atom™ Platform</a></p>
+
+<p>2- <a href="https://developer.android.com/ndk/guides/abis">Android ABIs</a></p>
+
+<p>3- <a href="https://www.youtube.com/watch?v=NT8blJ2-jeU&amp;list=PLFTIxMvfPSS0WST-XWNhumx4V3-Cf47m0&amp;index=2&amp;t=0s">Droidcon SF 2018 - Getting Started with the Android NDK</a></p>
+
+<p>4- <a href="https://medium.com/androiddevelopers/getting-started-with-c-and-android-native-activities-2213b402ffff">Getting Started with C++ and Android Native Activities</a></p>
+
+<p>5- <a href="https://github.com/cathybgyz/zimenglyu/blob/master/_posts/2018-11-27-tflite-android-ndk-eng.markdown">Android NDK eng</a></p>
+
+<p>6- <a href="https://github.com/leadrien/opencv_native_androidstudio">Opencv Native Androidstudio</a></p>
+
+<p>7- <a href="https://github.com/opencv/opencv/wiki/Deep-Learning-in-OpenCV">Deep Learning in OpenCV</a></p>
+
+    </div>
+
+    
+<hr>
+
+<aside id="comments" class="disqus">
+  <h3><i class="icon icon-comments-o"></i> Comments</h3>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'https://rabi3elbeji.github.io/blog/2018/Introduction-NDK-DeepLearning/';
+      this.page.identifier = '/blog/2018/Introduction-NDK-DeepLearning';
+    };
+    (function() {
+      var d = document,
+      s = d.createElement('script');
+      s.src = '//rabiielbeji.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</aside>
+
+
+  </div>
+
+</article>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="social">
+  <li><a href="https://github.com/rabi3elbeji" target="_blank"><i class="icon icon-github"></i></a></li>
+  <li><a href="https://twitter.com/rbelbeji" target="_blank"><i class="icon icon-twitter"></i></a></li>
+  <li><a href="https://linkedin.com/in/rabii-elbeji-6432348a" target="_blank"><i class="icon icon-linkedin"></i></a></li>
+</ul>
+
+    <p class="txt-medium-gray">
+      <small>&copy;2019 Rabii ELBEJI. All rights reserved.</small>
+    </p>
+  </div>
+</footer>
+
+
+</body>
+</html>
