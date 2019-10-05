@@ -1,0 +1,61 @@
+source:
+destination: _site
+sass:
+  sass_dir: _sass
+  style: compressed # expanded
+
+
+# Build settings
+permalink: /blog/:year/:title/
+markdown: kramdown
+highlighter: pygments
+
+
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: "/page/:num/"
+
+comments: true
+
+
+
+# SEO settings
+title: Rabii Elbeji
+description: "Personal website"
+keywords: "rabii, elbeji, openbee, engineer"
+url: https://rabi3elbeji.github.io
+baseurl: ""
+
+google_analytics: UA-115439306-1
+repo: https://github.com/rabi3elbeji/rabi3elbeji.github.io
+disqus_shortname: "rabiielbeji"
+disqus_site_shortname: "rabiielbeji"
+
+# Author settings
+author:
+  name: Rabii Elbeji
+  job: R&D Machine Learning Engineer
+  bio: "Enthusiast performance, responsive design and usability, always looking for the best project and good coffee."
+  thumb: /images/author.jpg
+  qrcode: /images/qr-code.png
+  email: rabi3elbeji@gmail.com
+  url: https://rabi3elbeji.github.io
+  github: https://github.com/rabi3elbeji
+  twitter: https://twitter.com/rbelbeji
+  linkedin: https://linkedin.com/in/rabii-elbeji-6432348a
+
+# navbar pages
+navbar:
+  - slug: about
+    title: About
+  - slug: blog
+    title: Blog
+  - slug: articles
+    title: Articles
+  - slug: resume
+    title: Resume
+
+plugins: [jekyll-paginate-v2]
+exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]
