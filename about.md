@@ -14,7 +14,7 @@ Also, I am a second-year Ph.D. student in the **RISC** Lab (Robotique, Informati
 
 I'm passionate about applying my knowledge of networks, computer science, and machine learning to areas like self-driving car, health, and steganalysis where we can really engineer better solutions for helping and protecting peoples.
 
-Have a look at my [resume](/resume/pdf/Rabii_Elbeji_CV.pdf){:target="_blank"}  for more information.
+Have a look at my **[resume](https://rabi3elbeji.github.io/resume/){:target="_blank"}**  for more information.
 
 **Email me if you’re looking to collaborate on future projects. Always open to new opportunities**
 
