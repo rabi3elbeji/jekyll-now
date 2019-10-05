@@ -5,6 +5,43 @@ permalink: /about/
 published: true
 ---
 
+<style>
+  .icondemo {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  .icondemo__item_mail {
+    width: 50%;
+    float: left;
+    padding: 0;
+  }
+  .icondemo__item {
+    width: 25%;
+    float: left;
+    padding: 0;
+  }
+  .icondemo__inner {
+    margin: 5px;
+    padding: 15px 10px;
+    border-radius: 6px;
+  }
+  .icondemo__item .icon {
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    transition: transform .12s linear;
+  }
+  .icondemo__item:hover .icon {
+    transform: scale(1.2)
+  }
+  .icondemo__item code {
+    display: block;
+  }
+</style>
 
 <img style="float: left; margin:0 10px 10px 0; max-width:22%; max-height:22%;" markdown="1" src="/images/author.jpg" alt="author thumb" class="dot">
 
@@ -18,4 +55,53 @@ Have a look at my **[resume](https://rabi3elbeji.github.io/resume/){:target="_bl
 
 **Email me if you’re looking to collaborate on future projects. Always open to new opportunities**
 
-<center><i class="icon icon-mail"></i>  <A HREF="mailto:rabi3elbeji@gmail.com">rabi3elbeji (at) gmail (dot) com</A>  <i class="icon icon-mail"></i></center>
+<center>
+<code><A HREF="mailto:rabi3elbeji@gmail.com">rabi3elbeji <b>(at)</b> gmail <b>(dot)</b> com</A></code>
+</center>
+
+
+<div class="clearfix"></div>
+
+I'm also available on:
+
+<center>
+<ul class="icondemo">
+    <li class="icondemo__item">
+      <div class="icondemo__inner">
+        <a href="callto://0021622037588"> <i class="icon icon-phone"></i></a>
+        <code>0021622037588</code>
+      </div>
+    </li>
+</ul>
+
+<ul class="icondemo">
+    <li class="icondemo__item">
+      <div class="icondemo__inner">
+        <a href="skype:rabii.elbeji1?call"> <i class="icon icon-skype"></i></a>
+        <code>rabii.elbeji1</code>
+      </div>
+    </li>
+</ul>
+
+
+<ul class="icondemo">
+    <li class="icondemo__item">
+      <div class="icondemo__inner">
+      <a href="{{ site.author.linkedin }}" target="_blank"><i class="icon icon-linkedin"></i></a>
+        <code>rabii-elbeji</code>
+      </div>
+    </li>
+</ul>
+
+<ul class="icondemo">
+    <li class="icondemo__item">
+      <div class="icondemo__inner">
+      <a href="{{ site.author.twitter }}" target="_blank"><i class="icon icon-twitter"></i></a>
+        <code>rbelbeji</code>
+      </div>
+    </li>
+</ul>
+
+</center>
+
+<div class="clearfix"></div>
