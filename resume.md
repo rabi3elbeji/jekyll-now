@@ -66,7 +66,7 @@ published: true
 # **Experience**
 
 #### April 2018 - present  [Open Bee](https://www.openbee.com/){:target="_blank"} - Nabeul, Tunisia
-**Machine Learning Engineer | Lead Dev**
+**R&D Engineer | Lead Dev**
 * R&D around OCR, Computer Vision, NLP and Blockchain
 * Tesseract-based OCR optimization project with image pre-processing approaches and re-training engine with multiple languages.
 * Develop and optimize a barcode API (for detection and recognition) using image preprocessing and deep learning models.
