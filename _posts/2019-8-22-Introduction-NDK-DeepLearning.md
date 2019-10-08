@@ -8,7 +8,7 @@ published: true
 comments: true
 ---
 
-<center><img src="/images/post5/ndk-intro.png" alt="Introduction to NDK for mobile apps" style="width: 700px;"/></center>
+<center><img src="/images/post5/ndk-intro.png" alt="Introduction to NDK for mobile apps" style="max-width: 100%; height: auto;"/></center>
 
 ### Introduction
 
@@ -28,7 +28,7 @@ Also, the NDK Reuses legacy native code. C/C++ codes can be compiled into a dyna
 
 If you write native code, your applications are still packaged into an .apk file and they still run inside of a virtual machine on the device. The fundamental Android application model does not change.
 
-<center><img src="/images/post5/ndk-use-cases.png" alt="Android NDK use cases" style="width: 700px;"/></center>
+<center><img src="/images/post5/ndk-use-cases.png" alt="Android NDK use cases" style="max-width: 100%; height: auto;"/></center>
 
 ### ABI: Application Binary Interface
 
@@ -50,9 +50,9 @@ android {
 
 When this flag is not configured, Gradle builds and packages all available ABIs.
 
-<center><img src="/images/post5/abi-cpus.png" alt="ARM and Intel Mobile CPUs architectures" style="width: 700px;"/></center>
+<center><img src="/images/post5/abi-cpus.png" alt="ARM and Intel Mobile CPUs architectures" style="max-width: 100%; height: auto;"/></center>
 
-<center><img src="/images/post5/supported-abi.png" alt="ABIs and supported instruction sets" style="width: 700px;"/></center>
+<center><img src="/images/post5/supported-abi.png" alt="ABIs and supported instruction sets" style="max-width: 100%; height: auto;"/></center>
 
 To reduce the size of your APK, consider configuring multiple APKs based on ABIâ€”instead of creating one large APK with all versions of your native libraries, Gradle creates a separate APK for each ABI you want to support and only packages the files each ABI needs.
 
@@ -62,36 +62,36 @@ To reduce the size of your APK, consider configuring multiple APKs based on ABIâ
 
 Under `Configure` select `SDK Manager` then check the **LLDB**, **NDK**, and **CMake** checkboxes.
 
-<center><img src="/images/post5/helloworld/step00.png" alt="Select SDK Manager" style="width: 700px;"/></center>
+<center><img src="/images/post5/helloworld/step00.png" alt="Select SDK Manager" style="max-width: 100%; height: auto;"/></center>
 
-<center><img src="/images/post5/helloworld/step0.png" alt="Install the NDK, CMake, and LLDB from the SDK Manager" style="width: 700px;"/></center>
+<center><img src="/images/post5/helloworld/step0.png" alt="Install the NDK, CMake, and LLDB from the SDK Manager" style="max-width: 100%; height: auto;"/></center>
 
 
 **2.** <b><u>Start a new Android Studio project</u></b>
 
 Open Android Studio and click **Start a new Android Studio project**. This will initiate the new project wizard.
 
-<center><img src="/images/post5/helloworld/step1.png" alt="Start a new Android Studio project" style="width: 700px;"/></center>
+<center><img src="/images/post5/helloworld/step1.png" alt="Start a new Android Studio project" style="max-width: 100%; height: auto;"/></center>
 
 **3.** <b><u>Select a Native C++ project</u></b>
 
-<center><img src="/images/post5/helloworld/step2.png" alt="Select a Native C++ project" style="width: 700px;"/></center>
+<center><img src="/images/post5/helloworld/step2.png" alt="Select a Native C++ project" style="max-width: 100%; height: auto;"></center>
 
 **4.** <b><u>Configure Your project</u></b>
 
 Next, give your project an application name, company domain (important when deploying your app to the Play Store and also influences your Java code namespaces), project location, and package name.
 
-<center><img src="/images/post5/helloworld/step3.png" alt="Configure Your project" style="width: 700px;"/></center>
+<center><img src="/images/post5/helloworld/step3.png" alt="Configure Your project" style="max-width: 100%; height: auto;"/></center>
 
 **5.**  <b><u>Customize C++ support</u></b>
 
 Determining what C++ Standard to use or when to upgrade can be tricky. The idea here is to use the C++ Standard thats most compatible your libraries, dependencies and existing source code. For this tutorial we'll use the Toolchain Default. But future versions of your projects may use more modern C++...
 
-<center><img src="/images/post5/helloworld/step4.png" alt="Configure Your project" style="width: 700px;"/></center>
+<center><img src="/images/post5/helloworld/step4.png" alt="Configure Your project" style="max-width: 100%; height: auto;"/></center>
 
 **6.**  <b><u>Project structure</u></b>
 
-<center><img src="/images/post5/helloworld/step5.png" alt="Hello World app view" style="width: 400px;"/></center>
+<center><img src="/images/post5/helloworld/step5.png" alt="Hello World app view" style="max-width: 100%; height: auto;"/></center>
 
 - Native Code in **native-lib.cpp**
 
@@ -150,7 +150,7 @@ public native String stringFromJNI();
 
 **7.**  <b><u>Result after running the app</u></b>
 
-<center><img src="/images/post5/helloworld/step6.png" alt="Hello World app view" style="width: 400px;"/></center>
+<center><img src="/images/post5/helloworld/step6.png" alt="Hello World app view" style="max-width: 100%; height: auto;"/></center>
 
 >
 **CODE**

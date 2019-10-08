@@ -8,7 +8,7 @@ published: true
 comments: true
 ---
 
-<center><img src="/images/post4/ac.png" alt="Drawing" style="width: 700px;"/></center>
+<center><img src="/images/post4/ac.png" alt="Drawing" style="max-width: 100%; height: auto;"/></center>
 
 ## Question ?
 

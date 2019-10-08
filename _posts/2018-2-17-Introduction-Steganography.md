@@ -8,7 +8,7 @@ published: true
 comments: true
 ---
 
-<center><img src="/images/post1/steganography_bg.png" alt="Drawing" style="width: 900px;"/></center>
+<center><img src="/images/post1/steganography_bg.png" alt="Drawing" style="width: 100%; height: auto;"/></center>
 
 ## Question ?
 

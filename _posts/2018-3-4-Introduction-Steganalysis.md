@@ -8,7 +8,7 @@ published: true
 comments: true
 ---
 
-<center><img src="/images/post2/Steganalysis_bg.png" alt="Drawing" style="width: 900px;"/></center>
+<center><img src="/images/post2/Steganalysis_bg.png" alt="Drawing" style="max-width: 100%; height: auto;"/></center>
 <br/>
 
 In the previous post titled "[**Friendly Introduction To Steganography**](../Introduction-Steganography)", we have shown that steganography, in its most common modern digital form, conceals plain text or whole files in an image, audio or video file.
