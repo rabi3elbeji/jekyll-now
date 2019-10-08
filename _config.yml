@@ -17,9 +17,6 @@ pagination:
   per_page: 3
   permalink: "/page/:num/"
 
-comments: true
-
-
 
 # SEO settings
 title: Rabii Elbeji
@@ -30,8 +27,13 @@ baseurl: ""
 
 google_analytics: UA-115439306-1
 repo: https://github.com/rabi3elbeji/rabi3elbeji.github.io
-disqus_shortname: "rabiielbeji"
-disqus_site_shortname: "rabiielbeji"
+
+# Disqus Comments
+disqus:
+    # Leave shortname blank to disable comments site-wide.
+    # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+    disqus_shortname: "rabi3elbeji"
+    disqus_site_shortname: "rabi3elbeji"
 
 # Author settings
 author:
