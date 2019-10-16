@@ -50,48 +50,48 @@ android {
 
 When this flag is not configured, Gradle builds and packages all available ABIs.
 
-<center><img src="/images/post5/abi-cpus.png" alt="ARM and Intel Mobile CPUs architectures" style="max-width: 100%; height: auto;"/></center>
+<center><img src="/images/post5/abi-cpus.png" alt="ARM and Intel Mobile CPUs architectures" style="max-width: 80%; height: auto; margin:2%;"/></center>
 
-<center><img src="/images/post5/supported-abi.png" alt="ABIs and supported instruction sets" style="max-width: 100%; height: auto;"/></center>
+<center><img src="/images/post5/supported-abi.png" alt="ABIs and supported instruction sets" style="max-width: 60%; height: auto; margin:2%;"/></center>
 
 To reduce the size of your APK, consider configuring multiple APKs based on ABI—instead of creating one large APK with all versions of your native libraries, Gradle creates a separate APK for each ABI you want to support and only packages the files each ABI needs.
 
->> **Hello World project**
+> **Hello World project**
 
 **1.** <b><u>Install the NDK, CMake, and LLDB</u></b>
 
 Under `Configure` select `SDK Manager` then check the **LLDB**, **NDK**, and **CMake** checkboxes.
 
-<center><img src="/images/post5/helloworld/step00.png" alt="Select SDK Manager" style="max-width: 100%; height: auto;"/></center>
+<center><img src="/images/post5/helloworld/step00.png" alt="Select SDK Manager" style="max-width: 50%; height: auto; margin:2%;"/></center>
 
-<center><img src="/images/post5/helloworld/step0.png" alt="Install the NDK, CMake, and LLDB from the SDK Manager" style="max-width: 100%; height: auto;"/></center>
+<center><img src="/images/post5/helloworld/step0.png" alt="Install the NDK, CMake, and LLDB from the SDK Manager" style="max-width: 50%; height: auto; margin:2%;"/></center>
 
 
 **2.** <b><u>Start a new Android Studio project</u></b>
 
 Open Android Studio and click **Start a new Android Studio project**. This will initiate the new project wizard.
 
-<center><img src="/images/post5/helloworld/step1.png" alt="Start a new Android Studio project" style="max-width: 100%; height: auto;"/></center>
+<center><img src="/images/post5/helloworld/step1.png" alt="Start a new Android Studio project" style="max-width: 50%; height: auto; margin:2%;"/></center>
 
 **3.** <b><u>Select a Native C++ project</u></b>
 
-<center><img src="/images/post5/helloworld/step2.png" alt="Select a Native C++ project" style="max-width: 100%; height: auto;"></center>
+<center><img src="/images/post5/helloworld/step2.png" alt="Select a Native C++ project" style="max-width: 50%; height: auto; margin:2%;"></center>
 
 **4.** <b><u>Configure Your project</u></b>
 
 Next, give your project an application name, company domain (important when deploying your app to the Play Store and also influences your Java code namespaces), project location, and package name.
 
-<center><img src="/images/post5/helloworld/step3.png" alt="Configure Your project" style="max-width: 100%; height: auto;"/></center>
+<center><img src="/images/post5/helloworld/step3.png" alt="Configure Your project" style="max-width: 50%; height: auto; margin:2%;"/></center>
 
 **5.**  <b><u>Customize C++ support</u></b>
 
 Determining what C++ Standard to use or when to upgrade can be tricky. The idea here is to use the C++ Standard thats most compatible your libraries, dependencies and existing source code. For this tutorial we'll use the Toolchain Default. But future versions of your projects may use more modern C++...
 
-<center><img src="/images/post5/helloworld/step4.png" alt="Configure Your project" style="max-width: 100%; height: auto;"/></center>
+<center><img src="/images/post5/helloworld/step4.png" alt="Configure Your project" style="max-width: 50%; height: auto; margin:2%;"/></center>
 
 **6.**  <b><u>Project structure</u></b>
 
-<center><img src="/images/post5/helloworld/step5.png" alt="Hello World app view" style="max-width: 100%; height: auto;"/></center>
+<center><img src="/images/post5/helloworld/step5.png" alt="Hello World app view" style="max-width: 50%; height: auto; margin:2%;"/></center>
 
 - Native Code in **native-lib.cpp**
 
@@ -150,28 +150,36 @@ public native String stringFromJNI();
 
 **7.**  <b><u>Result after running the app</u></b>
 
-<center><img src="/images/post5/helloworld/step6.png" alt="Hello World app view" style="max-width: 100%; height: auto;"/></center>
+<center><img src="/images/post5/helloworld/step6.png" alt="Hello World app view" style="max-width: 30%; max-height: 30%;"/></center>
 
 >
 **CODE**
 The code is available on [NDK_HelloWorld](https://github.com/rabi3elbeji/NDK_HelloWorld)
 
 
->> **NDK and OpenCV for object detection**
+> **Image processing with OpenCV**
 
-**1.** <b><u>What's OpenCV?</u></b>
+<b><u>What's OpenCV?</u></b>
 
 OpenCV (Open Source Computer Vision) is a library of programming functions mainly aimed at real-time computer vision. In simple language it is library used for Image Processing. It is mainly used to do all the operation related to Images.
 
 It has a C++ interface and support Android :smile:
 
-**2.** <b><u>OpenCV DNN module</u></b>
+Below is an example of some of the basic operations on the image.
 
-OpenCV DNN (Deep Neural Networks) module has been released from OpenCV 3.3 version and it's designed for running multiple deep learning models trained from different deep learning frameworks like Caffe and TensorFlow. It supports various networks architectures based on YOLO, MobileNet-SSD, Inception-SSD, Faster-RCNN Inception,Faster-RCNN ResNet, and Mask-RCNN Inception.
+<center>
+<img src="/images/post5/opencv/rgb.jpg" alt="RGB original image" style="max-width: 30%; max-height: 30%; margin: 1%;"/>
+<img src="/images/post5/opencv/gray.jpg" alt="Gray original image" style="max-width: 30%; max-height: 30%;margin: 1%;"/>
+<img src="/images/post5/opencv/canny.jpg" alt="Vanny original image" style="max-width: 30%; max-height: 30%;margin: 1%;"/>
+</center>
 
 >
 **CODE**
 Clone [NDK OpenCV](https://github.com/rabi3elbeji/NDK_OpenCV) from github and follow usage steps
+
+> **Image processing with OpenCV DNN**
+
+OpenCV DNN (Deep Neural Networks) module has been released from OpenCV 3.3 version and it's designed for running multiple deep learning models trained from different deep learning frameworks like Caffe and TensorFlow. It supports various networks architectures based on YOLO, MobileNet-SSD, Inception-SSD, Faster-RCNN Inception,Faster-RCNN ResNet, and Mask-RCNN Inception.
 
 ### Conclusion
 
