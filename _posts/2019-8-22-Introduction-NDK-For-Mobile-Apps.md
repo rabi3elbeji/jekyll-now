@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Introduction to NDK for Android mobile apps
-date:   2018-10-11 00:00:00
+date:   2019-08-22 00:00:00
 categories: [Artificial Intelligence]
 tags: [Artificial Intelligence]
 published: true
