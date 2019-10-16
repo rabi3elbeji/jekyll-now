@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Friendly Introduction to Speech Recognition
-date:   2019-10-17 00:00:00
+date:   2019-10-16 00:00:00
 categories: [Artificial Intelligence]
 tags: [Artificial Intelligence, speech recognition]
 published: true
