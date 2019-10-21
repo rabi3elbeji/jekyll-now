@@ -6,6 +6,7 @@ categories: [Artificial Intelligence]
 tags: [Artificial Intelligence]
 published: true
 comments: true
+toc: true
 ---
 
 <center><img src="/images/post4/ac.png" alt="Drawing" style="max-width: 100%; height: auto;"/></center>

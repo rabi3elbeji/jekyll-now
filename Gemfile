@@ -26,4 +26,7 @@ group :jekyll_plugins do
   gem "pygments.rb"
   gem "jekyll-compose"
   gem "kramdown"
+  gem 'jemoji'
+  gem 'liquid_reading_time'
+  gem 'jekyll-toc'
 end

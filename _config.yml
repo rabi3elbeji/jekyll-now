@@ -8,8 +8,7 @@ sass:
 # Build settings
 permalink: /blog/:year/:title/
 markdown: kramdown
-highlighter: pygments
-
+highlighter: rouge
 
 
 pagination:
@@ -17,6 +16,9 @@ pagination:
   per_page: 3
   permalink: "/page/:num/"
 
+maps:
+    google:
+      api_key: AIzaSyCDglZFk0c0pH4LDgpwfuEbwa2tBZg4yJc
 
 # SEO settings
 title: Rabii Elbeji
@@ -59,5 +61,5 @@ navbar:
   - slug: resume
     title: Resume
 
-plugins: [jekyll-paginate-v2]
+plugins: [jekyll-paginate-v2, jemoji, jekyll-toc]
 exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]

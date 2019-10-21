@@ -6,19 +6,31 @@ categories: [steganography]
 tags: [steganography]
 published: true
 comments: true
+toc: true
 ---
 
 <center><img src="/images/post1/steganography_bg.png" alt="Drawing" style="width: 100%; height: auto;"/></center>
 
-## Question ?
+<style>
+.lettrine {
+	float: left;
+   text-shadow:3px 3px 3px silver;  
+   font-size: 4em;  
+   line-height: 80%;
+   margin:-.1em 0px;
+   padding-right: .1em
+}
+</style>
 
-As a software developer or computer science, networks student or simply a web surfer, you may hear the word cryptography. The aim of using cryptography is to provide a secure communication while transmitting data throw network supports. Cryptography techniques modify the data to make them incomprehensible.
+### Question ?
+
+<span class="lettrine">A</span>s a software developer or computer science, networks student or simply a web surfer, you may hear the word cryptography. The aim of using cryptography is to provide a secure communication while transmitting data throw network supports. Cryptography techniques modify the data to make them incomprehensible.
 
 But here I have a simple question:
 
 **Can we transmit secret data without applying cryptography techniques throw network supports and trusted their security at the same time?**
 
-## Brief Response
+### Brief Response
 
 **Yes**, the response is **Steganography**. Nowadays, steganography is defined as the art and science of hiding or embedding secret data through various multimedia containers or network supports such as videos, audio files, network packets and last but not least digital images.
 

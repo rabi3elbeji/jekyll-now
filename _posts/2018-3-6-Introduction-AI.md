@@ -6,10 +6,12 @@ categories: [Artificial Intelligence]
 tags: [Artificial Intelligence]
 published: true
 comments: true
+toc: true
 ---
 
 <center><img src="/images/post3/ai_bg.png" alt="AI" style="max-width: 100%; height: auto;"/></center>
 <br/>
+
 
 In recent years, Artificial Intelligence (AI) has had a huge impact on our daily lives like never before. Day after day, we see products that automate several tasks and serve us in an intelligent way. The proposed solutions of AI are rather personalized than standard. Today we find AI everywhere in large and small industries. Giant companies like Google, Amazon, Microsoft, Apple, Samsung, etc... spent millions of dollars in AI research to improve their products.
 
