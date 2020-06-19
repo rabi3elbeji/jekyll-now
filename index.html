@@ -11,9 +11,12 @@ layout: default
       <a href="{{ '/about' | prepend: site.baseurl }}" class="button button-ghost" title="About">About</a>
       <a href="{{ '/blog' | prepend: site.baseurl }}" class="button button-ghost" title="Blog">Blog</a>
       <a href="{{ '/articles' | prepend: site.baseurl }}" class="button button-ghost" title="Articles">Articles</a>
+      <a href="{{ '/books' | prepend: site.baseurl }}" class="button button-ghost" title="Books">Books</a>
       <a href="{{ '/resume' | prepend: site.baseurl }}" class="button button-ghost" title="Resume">Resume</a>
       {% include social.html %}
-
+      <p class="txt-medium-gray">
+        <small>&copy;{{ site.time | date: '%Y' }} Rabii ELBEJI. All rights reserved.</small>
+      </p>
     </div>
   </div>
 </section>

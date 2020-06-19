@@ -58,6 +58,8 @@ navbar:
     title: Blog
   - slug: articles
     title: Articles
+  - slug: books
+    title: Books
   - slug: resume
     title: Resume
 
