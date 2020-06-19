@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Scan the QR code below
+title: Scan the QR code
 permalink: /resume-qr/
 published: true
 ---
