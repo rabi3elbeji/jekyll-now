@@ -14,7 +14,7 @@ Access, [localhost:4000/](http://localhost:4000/)
 ### Deploy in Github pages in 2 steps
 
 1. Change the variables `GITHUB_REPONAME` and `GITHUB_REPO_BRANCH` in `Rakefile`
-2. Run `rake` or `rake publish` for build and publish on Github
+2. Run `rake` or `rake publish` or `bundle exec rake publish` for build and publish on Github
 
 ### Using Rake tasks
 
