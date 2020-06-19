@@ -50,8 +50,9 @@ Have a look at my **[resume](https://rabi3elbeji.github.io/resume/){:target="_bl
 
 **Email me if you’re looking to collaborate on future projects. Always open to new opportunities**
 
+
 <center>
-<code><A HREF="mailto:rabi3elbeji@gmail.com">rabi3elbeji <b>(at)</b> gmail <b>(dot)</b> com</A></code>
+<code><A HREF="mailto:rabii.elbeji@enit.utm.tn">rabii  <b>(dot)</b> elbeji <b>(at)</b> enit <b>(dot)</b> utm  <b>(dot)</b> tn</A></code>
 </center>
 
 
