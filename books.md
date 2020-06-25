@@ -13,9 +13,6 @@ published: true
 
  [![Author](https://img.shields.io/badge/Author-Rabii%20Elbeji%20-blue.svg?style=flat-square)]() ![20%](https://progress-bar.dev/20/)
 
-
- **The book generally describes the evolution of StegoSystems over the past decade. It is made up of the following 5 chapters**:
-
  | Index	|  Title	|   Description	|
  |---|---|---|
  |  Chapter 1	|  `Introduction to stegosystems in the digital domain` 	|   This chapter presents the compositions and characteristics of digital stegosystems in the digital domain. Also the different use cases in detail and their impact in several areas of society. 	|
