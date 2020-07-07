@@ -8,7 +8,7 @@ published: true
 <div>
 <center>
 
-<h2>My Book List</h2>
+<h2>My list of books</h2>
 <a style="color:#0B4AF0;" href="#Steganography_And_Steganalysis_In_The_Era_of_Deep_Learning">#1 Steganography And Steganalysis In The Era of Deep Learning </a>
 
 <br/>
@@ -123,14 +123,33 @@ This book is for mobile applications developers passionate about computer vision
 
 | Index	|  Title	|   Description	|
 |---|---|---|
+| Chapter 1 | Introduction to NDK and native application development | This chapter presents the basic steps for creating a native Android application with NDK. |
+| Chapter 2 | OpenCV-based real-time computer vision tasks | This chapter presents the steps for integrating the OpenCV library into the native application. It will guide you step by step to perform computer vision tasks in real time using the camera of the mobile phone. |
+| Chapter 3 | Perform image classification and object detection models with a native application | This chapter aims to present the implementation of light image classification models (MobileNet, SqueezeNet, etc.) and object detection models (YOLO, SSD, etc.) for a native application. |
+
+<hr style="border:2px solid gray"/>
 
 
+<center>
 
- <center><h2 id="Towards_the_Artificial_Consciousness"> #3 Towards the Artificial Consciousness </h2>
+<h2 id="Towards_the_Artificial_Consciousness"> #3 Towards the Artificial Consciousness </h2>
 
+<img alt="Author" src="https://img.shields.io/badge/Author-Rabii%20Elbeji%20-blue.svg?style=flat-square">
 
- <img alt="Author" src="https://img.shields.io/badge/Author-Rabii%20Elbeji%20-blue.svg?style=flat-square">
-
-  <img alt="5% of progress" src="https://progress-bar.dev/5/">
+ <img alt="1% of progress" src="https://progress-bar.dev/1/">
 
 </center>
+
+<br/>
+
+<h4>  1. Book Description </h4>
+
+<ul>
+
+<li>The main idea of ​​this book is to simplify to the reader complex futuristic ideas on Artificial Consciousness (AC) and Artificial General Intelligence (AGI). </li>
+
+<li> This book will cover philosophical theory, science fiction ideas and solid mathematical theorems related to artificial intelligence </li>
+
+<li> I am currently in the early stages of writing this book. I work on collecting, reading and analyzing studies and books related to artificial consciousness. </li>
+
+</ul>
