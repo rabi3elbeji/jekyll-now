@@ -39,7 +39,7 @@ published: true
 
 </style>
 
-<img style="float: right; margin:0 10px 10px 0; max-width:18%; max-height:18%;" src="{{ site.author.thumb | prepend: site.baseurl }}" alt="author thumb" class="dot"> </center>
+<img style="float: right; margin:0 10px 10px 0; max-width:18%; max-height:18%;" src="{{ site.author.thumb | prepend: site.baseurl }}" alt="author thumb" class="dot">
 
 <div class="clearfix"></div>
 
