@@ -22,6 +22,8 @@ published: true
 
 <br/>
 
+ <hr style="border:2px solid gray"/>
+
  <center><h2 id="Steganography_And_Steganalysis_In_The_Era_of_Deep_Learning"> #1 Steganography And Steganalysis In The Era of Deep Learning </h2>
 
 
@@ -68,10 +70,13 @@ published: true
  | Index	|  Title	|   Description	|
  |---|---|---|
  |  Chapter 1	|  Introduction to steganography and steganalysis in the digital domain 	|   This chapter presents the compositions and characteristics of digital stegosystems in the digital domain. Also the different use cases in detail and their impact in several areas of society. 	|
- | Chapter 2	| Steganography and Machine Learning | This chapter presents in detail the various relevant studies in Steganography using Machine Learning as well as a comparative study of these studies according to several scientific criteria and metrics.	|
- | Chapter 3	| Steganalysis and Machine Learning | This chapter is similar in structure to the second chapter but the study this time was devoted to approaches to steganalysis. |
+ | Chapter 2	| Steganography and Deep Learning | This chapter presents in detail the various relevant studies in Steganography using Machine Learning as well as a comparative study of these studies according to several scientific criteria and metrics.	|
+ | Chapter 3	| Steganalysis and Deep Learning | This chapter is similar in structure to the second chapter but the study this time was devoted to approaches to steganalysis. |
  | Chapter 4	| Advantages and disadvantages of using deep learning in stegosystemes | The chapter follows the evolution of steganography and steganalysis approaches based on the different deep learning models and mentions their added value during the last decade. The Chapter also attacks the weak point of these models. |
  | Chapter 5	| Towards Universal StegoSystems with AGI (Artificial General Intelligence) | A futuristic vision of the impact of the evolution of AI on stegosystems and their impact on data privacy. |
+
+ <hr style="border:2px solid gray"/>
+
 
 
  <center><h2 id="Computer_vision_for_mobile_application_with_OpenCV_and_NDK"> #2 Computer vision for mobile application with OpenCV and NDK </h2>
@@ -83,6 +88,41 @@ published: true
 
 </center>
 
+> Develop native Android mobile applications using a variety of computer vision techniques and algorithms with OpenCV and NDK.
+
+<h4>  1. Key Features </h4>
+
+<ul>
+<li> Gain a fundamental understanding of advanced computer vision and lightweight neural network models in use today for mobile applications.</li>
+
+<li> Cover tasks such as image processing, image classification, and object detection with OpenCV library.</li>
+
+<li> Create native high performance applications with C/C++ using NDK and integrate them with Java through Java Native Interfaces.</li>
+
+<li> Develop optimized computer vision applications that perform computer vision tasks in real time with efficient memory management.</li>
+</ul>
+
+<h4>  2. Book Description </h4>
+
+<ul>
+
+
+Computer vision allows machines to gain human-level understanding to visualize, process, and analyze images and videos. The integration of computer vision tasks into mobile phones could be the source of many intelligent and innovative applications and make these tasks more portable and accessible anytime and anywhere. This book focuses on using OpenCV and NDK to help you learn and develop advanced computer vision tasks such as image processing, classification, object detection, etc. for native Android applications. You will start by preparing the native application environment with the NDK library and OpenCV. Then, you will explore and implement basic image processing algorithms such as image binarization, mathematical morphologies, edge extraction, etc. As you advance, you will learn to use deep learning models with OpenCV for image classification and object detection. By the end of this book, you will have a solid understanding of computer vision and be able to confidently develop a native mobile application.
+
+</ul>
+
+
+<h4> 3. What this book is for  </h4>
+
+<ul>
+This book is for mobile applications developers passionate about computer vision, computer vision beginners and professionals, image processing beginners and professionals, machine learning engineers and AI developers who have some knowledge of machine learning and deep learning and want to build expert-level computer vision applications.
+</ul>
+
+
+<h4> 4. Table Of content  </h4>
+
+| Index	|  Title	|   Description	|
+|---|---|---|
 
 
 
