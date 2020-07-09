@@ -13,12 +13,14 @@ toc: true
 
 <style>
 .lettrine {
+	color: #292929;
 	float: left;
-   text-shadow:3px 3px 3px silver;  
-   font-size: 4em;  
-   line-height: 80%;
-   margin:-.1em 0px;
-   padding-right: .1em
+  font-size:60px;
+	font-weight:bold;
+	line-height:40px;
+	padding-top:4px;
+  padding-right:4px;
+	font-family: arial;
 }
 </style>
 
@@ -154,27 +156,32 @@ The Structural Similarity (`SSIM`) Index quality assessment index is based on th
 
 Nowadays, there are many applications for Information Hiding:
 
-- **Advanced data structures**: We can devise data structures to conceal unplanned information without breaking compatibility with old software. For instance, if we need extra information about photos, we can put it in the photos themselves. The information will travel with the photos, but it will not disturb old software that does not know of its existence. Furthermore, we can devise advanced data structures that enable us to use small pieces of our hard disks to secretly conceal important information.
+<ul>
+<li><b>Advanced data structures</b>: We can devise data structures to conceal unplanned information without breaking compatibility with old software. For instance, if we need extra information about photos, we can put it in the photos themselves. The information will travel with the photos, but it will not disturb old software that does not know of its existence. Furthermore, we can devise advanced data structures that enable us to use small pieces of our hard disks to secretly conceal important information. </li>
 
-- **Medical imagery**: Hospitals and clinical doctors can put together patient’s exams, imagery, and their information. When a doctor analyzes a radiological exam, the patient’s information is embedded in the image, reducing the possibility of wrong diagnosis and/or fraud. Medical-image steganography requires extreme care when embedding additional data within the medical images: the additional information must not affectthe image quality.
+<li><b>Medical imagery</b>: Hospitals and clinical doctors can put together patient’s exams, imagery, and their information. When a doctor analyzes a radiological exam, the patient’s information is embedded in the image, reducing the possibility of wrong diagnosis and/or fraud. Medical-image steganography requires extreme care when embedding additional data within the medical images: the additional information must not affectthe image quality. </li>
 
-- **Strong watermarks**: Creators of digital content are always devising techniques to describe the restrictions they place on their content. These technique can be as simple as the message “Copyright year by Someone”, as complex as the digital rights management system (`DRM`) devised by `Apple Inc.`  in its `iTunes` store’s contents, or the watermarks in the contents of the Vatican Library.
+<li><b>Strong watermarks</b>: Creators of digital content are always devising techniques to describe the restrictions they place on their content. These technique can be as simple as the message “Copyright year by Someone”, as complex as the digital rights management system (`DRM`) devised by `Apple Inc.`  in its `iTunes` store’s contents, or the watermarks in the contents of the Vatican Library. </li>
 
-- **Military agencies**:  Militaries’ actions can be based on hidden and protected communications.   Even with crypto-graphed content,  the detection of a signal in a modern battlefield can lead to the rapid identification and attack ofthe involved parties in thecommunication. For this reason, military-grade equipmentuses modulation and spreadspectrum techniques in its communications.
+<li><b>Military agencies</b>:  Militaries’ actions can be based on hidden and protected communications.   Even with crypto-graphed content,  the detection of a signal in a modern battlefield can lead to the rapid identification and attack ofthe involved parties in thecommunication. For this reason, military-grade equipmentuses modulation and spreadspectrum techniques in its communications. </li>
 
-- **Intelligence agencies**: Justice and Intelligence agencies are interested in studying these technologies, and identifying their weaknesses to be able to detect and track hidden messages.
+<li><b>Intelligence agencies</b>: Justice and Intelligence agencies are interested in studying these technologies, and identifying their weaknesses to be able to detect and track hidden messages. </li>
 
-- **Document tracking tools**:  We can use hidden information to identify the legitimate owner of a document. If the document is leaked, or distributed to unauthorized parties, we can track it back to the rightful owner and perhaps discover which party has brokenthe license distribution agreement.
+<li><b>Document tracking tools</b>:  We can use hidden information to identify the legitimate owner of a document. If the document is leaked, or distributed to unauthorized parties, we can track it back to the rightful owner and perhaps discover which party has brokenthe license distribution agreement. </li>
 
-- **Document authentication**: Hidden information bundled into a document can contain a digital signature that certifies its authenticity.
+<li><b>Document authentication</b>: Hidden information bundled into a document can contain a digital signature that certifies its authenticity. </li>
 
-- **General communication**: People are interested in these techniques to provide more security in their daily communications. Many governments continue to see the internet, corporations, and electronic conversationsas an opportunity for surveil-lance.
+<li><b>General communication</b>: People are interested in these techniques to provide more security in their daily communications. Many governments continue to see the internet, corporations, and electronic conversationsas an opportunity for surveil-lance. </li>
 
-- **Digital elections and electronic money**: Digital elections and electronic money are based on secret and anonymous communications techniques.
+<li><b>Digital elections and electronic money</b>: Digital elections and electronic money are based on secret and anonymous communications techniques. </li>
 
-- **Radar systems**: Modern transit radar systems can integrate information collected in a radar base station, avoiding the need to send separate text and pictures to the receiver’s base stations.
+<li><b>Radar systems</b>: Modern transit radar systems can integrate information collected in a radar base station, avoiding the need to send separate text and pictures to the receiver’s base stations. </li>
 
-- **Remote sensing**: Remote sensing can put together vector maps and digital imagery of a site, further improving the analysis of cultivated areas, including urban and naturalsites, among others.
+<li> <b>Remote sensing</b>: Remote sensing can put together vector maps and digital imagery of a site, further improving the analysis of cultivated areas, including urban and naturalsites, among others. </li>
+
+</ul>
+
+
 
 ### 7. Scientific research
 
