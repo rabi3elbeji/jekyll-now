@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Friendly Introduction To Steganography</title>
+<meta name="description" content="">
+
+
+<meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Friendly Introduction To Steganography">
+  <meta property="og:description" content="
+
+">
+  <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+
+<link rel="stylesheet" href="/css/main.css">
+<link rel="canonical" href="https://rabi3elbeji.github.io/blog/2018/Introduction-Steganography/">
+<link rel="alternate" type="application/rss+xml" title="Rabii Elbeji" href="https://rabi3elbeji.github.io/feed.xml" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-115439306-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <input type="checkbox" id="toggleNavbar">
+    <h1 class="logo"><a href="/">Rabii <span>ELBEJI</span></a></h1>
+    <label for="toggleNavbar" role="button" class="toggle-navbar-button">
+      <i class="icon icon-menu"></i>
+      <i class="icon icon-cross"></i>
+    </label>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/" title="Home">Home</a></li>
+        
+          <li><a href="/about" title="About">About</a></li>
+        
+          <li><a href="/blog" title="Blog">Blog</a></li>
+        
+          <li><a href="/articles" title="Articles">Articles</a></li>
+        
+          <li><a href="/books" title="Books">Books</a></li>
+        
+          <li><a href="/resume" title="Resume">Resume</a></li>
+        
+        <li><a href="/tweets/" target="_blank"><i class="icon icon-twitter"></i></a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main class="main-container">
+  <div class="container">
+    <article role="article" class="post">
+
+  <div class="card">
+    <header class="post-header">
+      <h1 class="post-title">Friendly Introduction To Steganography</h1>
+      <em class="post-meta">
+        <time>Feb 17, 2018</time>
+      </em>
+    </header>
+
+    <div class="post-content">
+      
+      <div id="table-of-contents">
+      <ul class="section-nav">
+<li class="toc-entry toc-h3"><a href="#question-">Question ?</a></li>
+<li class="toc-entry toc-h3"><a href="#brief-response">Brief Response</a></li>
+<li class="toc-entry toc-h3"><a href="#1-a-bit-of-history">1. A bit of history</a></li>
+<li class="toc-entry toc-h3"><a href="#2-whats-a-stegosystem-">2. What’s a Stegosystem ?</a></li>
+<li class="toc-entry toc-h3"><a href="#3-steganographic-methods">3. Steganographic methods</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#31-spatial-domain">3.1. Spatial domain</a></li>
+<li class="toc-entry toc-h4"><a href="#32-transform-domain">3.2. Transform domain</a></li>
+<li class="toc-entry toc-h4"><a href="#33-spread-spectrum-technique">3.3. Spread Spectrum Technique</a></li>
+<li class="toc-entry toc-h4"><a href="#34-statistical-method">3.4. Statistical Method</a></li>
+<li class="toc-entry toc-h4"><a href="#35-distortion-techniques">3.5. Distortion Techniques</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#4-characteristics-of-a-strong-steganography-method">4. Characteristics of a Strong Steganography method</a></li>
+<li class="toc-entry toc-h3"><a href="#5-perfermance-measure">5. Perfermance measure</a></li>
+<li class="toc-entry toc-h3"><a href="#6-scientific-and-commercial-applications">6. Scientific and commercial applications</a></li>
+<li class="toc-entry toc-h3"><a href="#7-scientific-research">7. Scientific research</a></li>
+<li class="toc-entry toc-h3"><a href="#8-an-overview-to-the-next-post">8. An overview to the next post</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+    </div>
+      <center><img src="/images/post1/steganography_bg.png" alt="Drawing" style="width: 100%; height: auto;" /></center>
+
+<style>
+.lettrine {
+	color: #292929;
+	float: left;
+  font-size:60px;
+	font-weight:bold;
+	line-height:40px;
+	padding-top:4px;
+  padding-right:4px;
+	font-family: arial;
+}
+</style>
+
+<h3 id="question-">Question ?</h3>
+
+<p><span class="lettrine">A</span>s a software developer or computer science, networks student or simply a web surfer, you may hear the word cryptography. The aim of using cryptography is to provide a secure communication while transmitting data throw network supports. Cryptography techniques modify the data to make them incomprehensible.</p>
+
+<p>But here I have a simple question:</p>
+
+<p><strong>Can we transmit secret data without applying cryptography techniques throw network supports and trusted their security at the same time?</strong></p>
+
+<h3 id="brief-response">Brief Response</h3>
+
+<p><strong>Yes</strong>, the response is <strong>Steganography</strong>. Nowadays, steganography is defined as the art and science of hiding or embedding secret data through various multimedia containers or network supports such as videos, audio files, network packets and last but not least digital images.</p>
+
+<h3 id="1-a-bit-of-history">1. A bit of history</h3>
+
+<p>Steganography is an old practice that has been around for a long time. People have desired to keep certain sensitive communications secret for thousands of years. The term steganography combines the Greek words <strong>steganos</strong>, meaning “covered, concealed, or protected” and graphein meaning “writing”.
+The first recorded uses of steganography can be traced back to 440 BC when ancient Greece, people  wrote messages on wood and covered it with wax that bore an innocent covering message. In 1499, <a href="https://en.wikipedia.org/wiki/Johannes_Trithemius" target="_blank">Johannes Trithemius</a>, introduce officially the concept of steganography in his book titled <a href="https://en.wikipedia.org/wiki/Steganographia" target="_blank">Steganographia</a>. In the last centuries, Steganography used during both world wars essentially in the espionage using secret inks in letters or photos. Recently, we have seen new generation of steganography called digital steganography used in many malware programs and cyber espionage tools. Four main trends of development of the so-called digital steganography can be distinguished:</p>
+<ul>
+  <li>digital media steganography</li>
+  <li>linguistic steganography</li>
+  <li>file system steganography</li>
+  <li>network steganography</li>
+</ul>
+
+<p>The summary of the evolution of the steganographic data carrier is presented in the figure down below.</p>
+
+<p><img src="/images/post1/steganography_timeline.png" alt="alt text" title="Steganographic evolution" /></p>
+
+<h3 id="2-whats-a-stegosystem-">2. What’s a Stegosystem ?</h3>
+
+<p>A <strong>Stegosystem</strong> describes the process that is used in performing steganographic methods. Let’s say that <strong>Alice</strong>, the expeditor, want to send a secret message to <strong>Bob</strong>, the receiver, using a stegosystem. Alice uses a steganographic method to embed the secret message (<code class="highlighter-rouge">M</code>) through a cover object (<code class="highlighter-rouge">C</code>). The embedding process generates a stego object (<code class="highlighter-rouge">S</code>). Alice sends the stego object to Bob clearly through the network without any encryption using a web or mobile application for example. In the other side, Bob must use the same steganographic method to extract the secret message (<code class="highlighter-rouge">M</code>) from the received stego object (<code class="highlighter-rouge">S</code>). Note that some steganographic methods use a stego key (<code class="highlighter-rouge">K</code>) in the embedding process to provide more security to the secret message. In this case, Bob must have the same stego key (<code class="highlighter-rouge">K</code>) used by Alice to extract the secret message (<code class="highlighter-rouge">M</code>).</p>
+
+<p><img src="/images/post1/stego_system.png" alt="alt text" title="A standard Stegosystem" /></p>
+
+<p>The main keywords used in the most stegosystems are:</p>
+
+<ul>
+  <li><strong>Cover Object</strong>:  The cover object is the carrier of the hidden message.  A cover is generally chosen in a manner that it appears most ordinary and innocuous and does not arouse suspicion as such. The cover object can be :
+    <ul>
+      <li>Text file (txt, pdf, word, …)</li>
+      <li>Image file (jpeg, png, gif, ppm, …)</li>
+      <li>Audio file (wav, mp3, aac, …)</li>
+      <li>Video file (mp4, avi, mov, flv, …)</li>
+      <li>Network protocol (tcp/ip, pop, smtp, http, …)</li>
+    </ul>
+  </li>
+  <li><strong>Stego Object</strong>: The cover object with a secret message concealed within it is known as the stego.
+It is used on the recipient side for extracting the hidden message.</li>
+  <li><strong>Stego Key</strong>: Stego  key  is  a  key  to  embed  data  in  a cover and extract data from the stego medium.</li>
+  <li><strong>Embedding Domain</strong>: refers to the cover medium characteristics that are exploited in embedding message into it. It may be spatial domain when direct modification of the constituent elements of the cover is modified (e.g. pixels in an image) or it can be the frequency domain or transform domain if mathematical transformations are carried on the medium before embedding.</li>
+</ul>
+
+<h3 id="3-steganographic-methods">3. Steganographic methods</h3>
+
+<p>Steganographic methods can be classified mainly into five categories, although in some cases this classification is not possible:</p>
+
+<ul>
+  <li>Spatial domain</li>
+  <li>Transform domain</li>
+  <li>Spread spectrum</li>
+  <li>Statistical Methods</li>
+  <li>Distortion Methods</li>
+</ul>
+
+<h4 id="31-spatial-domain">3.1. Spatial domain</h4>
+
+<p>Spatial domain steganographic techniques, also known as substitution techniques, are a group of
+relatively simple techniques that create a covert channel in the parts of the cover image in which
+changes are likely to be a bit scant when compared to the human’s eyes.</p>
+
+<p>One of the ways to do so is to hide information in the Least Significant Bit (LSB) of the image data.
+This embedding method is basically based on the fact that the least significant bits in an image can
+be thought of as random noise, and consequently they become not responsive to any changes on the image.</p>
+
+<h4 id="32-transform-domain">3.2. Transform domain</h4>
+
+<p>Transform domain embedding can be defined as a domain of embedding techniques for which a number of algorithms have been suggested. The process of embedding data in the <em>frequency domain</em> of a
+signal is much stronger than embedding principles that operate in the <em>time domain</em>.</p>
+
+<p>Transform domain techniques have an advantage over LSB techniques because they hide information in areas of the image that are less exposed to compression, cropping, and image processing.</p>
+
+<h4 id="33-spread-spectrum-technique">3.3. Spread Spectrum Technique</h4>
+
+<p>Spread spectrum transmission in radio communications transmits messages below the noise level for any given frequency. When employed with steganography, spread spectrum either deals with the cover image as noise or tries to add pseudo-noise to the cover image.</p>
+
+<h4 id="34-statistical-method">3.4. Statistical Method</h4>
+
+<p>Also  known  as  model-based  techniques,  these  techniques  tend  to  modulate  or  modify  the
+statistical properties of an image in addition to preserving them in the embedding process. This
+modification is typically small, and it is thereby able to take advantage of the human weakness in
+detecting luminance variation.</p>
+
+<h4 id="35-distortion-techniques">3.5. Distortion Techniques</h4>
+
+<p>Distortion techniques require knowledge of the original cover image during the decoding process where
+the decoder functions to check for differences between the original cover image and the
+distorted cover image in order to restore the secret message. The encoder, on the other hand, adds a  sequence of changes to the cover image. So, information is described as being stored by signal distortion.</p>
+
+<h3 id="4-characteristics-of-a-strong-steganography-method">4. Characteristics of a Strong Steganography method</h3>
+
+<p>Though steganography’s most obvious goal is to hide data, there are several other related goals used to judge a method’s steganographic strength. These include:</p>
+<ul>
+  <li><strong>Capacity</strong> (how much data can be hidden)</li>
+  <li><strong>Invisibility</strong> (inability for humans to detect a distortion in the stego-object)</li>
+  <li><strong>Undetectability</strong> (inability for a computer to use statistics or other computational methods to differentiate between covers and stego-objects)</li>
+  <li><strong>Robustness</strong> (message’s ability to persist despite compression or other common modifications)</li>
+  <li><strong>Tamper resistance</strong> (message’s ability to persist despite active measures to destroy it)</li>
+  <li><strong>Signal to noise ratio (SNR)</strong> (how much data is encoded versus how much unrelated data is encoded).</li>
+</ul>
+
+<p>The three main components, which work in opposition to one another, are <em>capacity</em>, <em>undetectability</em>, and <em>robustness</em>.</p>
+
+<h3 id="5-perfermance-measure">5. Perfermance measure</h3>
+
+<p>As a performance measure for image distortion due to embedding, the well-known peak-signal-to-noise ratio (<code class="highlighter-rouge">PSNR</code>), which is categorized under difference distortion metrics, can be applied to stego images.  It is defined as:</p>
+
+<p align="center">
+	<img src="/images/post1/psnr_function.png" />
+</p>
+
+<p>In the previous equation, <code class="highlighter-rouge">R</code> is the maximum fluctuation in the input image data type. For example, if the input image has a double-precision floating-point data type, then <code class="highlighter-rouge">R</code> is 1. If it has an 8-bit unsigned integer data type, <code class="highlighter-rouge">R</code> is 255, etc. <code class="highlighter-rouge">MSE</code> denotes the mean square error, which is given as</p>
+
+<p align="center">
+	<img src="/images/post1/mse_function.png" />
+</p>
+
+<p><code class="highlighter-rouge">M</code> and <code class="highlighter-rouge">N</code> are the number of rows and columns in the input image.</p>
+
+<p>The <code class="highlighter-rouge">MSE</code> represents the cumulative squared error between the stego and the cover image, whereas PSNR represents a measure of the peak error. The lower the value of <code class="highlighter-rouge">MSE</code>, the lower the error.</p>
+
+<p>The Structural Similarity (<code class="highlighter-rouge">SSIM</code>) Index quality assessment index is based on the computation of three terms, namely the luminance term, the contrast term and the structural term. The overall index is a multiplicative combination of the three terms.</p>
+
+<p align="center">
+	<img src="/images/post1/ssim_function.png" />
+</p>
+
+<h3 id="6-scientific-and-commercial-applications">6. Scientific and commercial applications</h3>
+
+<p>Nowadays, there are many applications for Information Hiding:</p>
+
+<ul>
+<li><b>Advanced data structures</b>: We can devise data structures to conceal unplanned information without breaking compatibility with old software. For instance, if we need extra information about photos, we can put it in the photos themselves. The information will travel with the photos, but it will not disturb old software that does not know of its existence. Furthermore, we can devise advanced data structures that enable us to use small pieces of our hard disks to secretly conceal important information. </li>
+
+<li><b>Medical imagery</b>: Hospitals and clinical doctors can put together patient’s exams, imagery, and their information. When a doctor analyzes a radiological exam, the patient’s information is embedded in the image, reducing the possibility of wrong diagnosis and/or fraud. Medical-image steganography requires extreme care when embedding additional data within the medical images: the additional information must not affectthe image quality. </li>
+
+<li><b>Strong watermarks</b>: Creators of digital content are always devising techniques to describe the restrictions they place on their content. These technique can be as simple as the message “Copyright year by Someone”, as complex as the digital rights management system (`DRM`) devised by `Apple Inc.`  in its `iTunes` store’s contents, or the watermarks in the contents of the Vatican Library. </li>
+
+<li><b>Military agencies</b>:  Militaries’ actions can be based on hidden and protected communications.   Even with crypto-graphed content,  the detection of a signal in a modern battlefield can lead to the rapid identification and attack ofthe involved parties in thecommunication. For this reason, military-grade equipmentuses modulation and spreadspectrum techniques in its communications. </li>
+
+<li><b>Intelligence agencies</b>: Justice and Intelligence agencies are interested in studying these technologies, and identifying their weaknesses to be able to detect and track hidden messages. </li>
+
+<li><b>Document tracking tools</b>:  We can use hidden information to identify the legitimate owner of a document. If the document is leaked, or distributed to unauthorized parties, we can track it back to the rightful owner and perhaps discover which party has brokenthe license distribution agreement. </li>
+
+<li><b>Document authentication</b>: Hidden information bundled into a document can contain a digital signature that certifies its authenticity. </li>
+
+<li><b>General communication</b>: People are interested in these techniques to provide more security in their daily communications. Many governments continue to see the internet, corporations, and electronic conversationsas an opportunity for surveil-lance. </li>
+
+<li><b>Digital elections and electronic money</b>: Digital elections and electronic money are based on secret and anonymous communications techniques. </li>
+
+<li><b>Radar systems</b>: Modern transit radar systems can integrate information collected in a radar base station, avoiding the need to send separate text and pictures to the receiver’s base stations. </li>
+
+<li> <b>Remote sensing</b>: Remote sensing can put together vector maps and digital imagery of a site, further improving the analysis of cultivated areas, including urban and naturalsites, among others. </li>
+
+</ul>
+
+<h3 id="7-scientific-research">7. Scientific research</h3>
+
+<p>Steganography is an active theme in scientific research that follows the development of technology. Nowadays, several laboratories and scientific researchers around the world are doing intense work that leads to a significant evolution of digital steganography during this century.</p>
+
+<p>I recommend this list for those who want to do scientific research in steganography</p>
+
+<ul>
+  <li><strong>Laboratories</strong>:
+    <ul>
+      <li><a href="http://dde.binghamton.edu/" target="_blank">DDE - Digital Data Embedding Laboratory, SUNY Binghamton, Binghamton, NY, USA</a></li>
+      <li><a href="http://www.lirmm.fr/" target="_blank">LIRMM - Laboratoire d’Informatique de Robotique et de Microélectronique de Montpellier, France</a></li>
+      <li><a href="https://www.ece.uic.edu/" target="_blank">ECE - Department, University of Illinois at ChicagoChicago, IL, USA</a></li>
+    </ul>
+  </li>
+  <li><strong>Scientific Researchers</strong>:
+    <ul>
+      <li><a href="http://www.ws.binghamton.edu/fridrich/" target="_blank">Dr. Jessica Fridrich</a></li>
+      <li><a href="http://dde.binghamton.edu/" target="_blank">DDE Lab members </a></li>
+      <li><a href="http://www.lirmm.fr/~chaumont/Resume.html" target="_blank">Dr. Marc Chaumont</a></li>
+    </ul>
+  </li>
+  <li><strong>Source codes</strong>:
+    <ul>
+      <li><a href="http://dde.binghamton.edu/download/" target="_blank">DDE Lab download website</a></li>
+    </ul>
+  </li>
+  <li><strong>Datasets</strong>:
+    <ul>
+      <li><a href="http://dde.binghamton.edu/download/ImageDB/BOSSbase_1.01.zip" target="_blank">BOSSbase_1.01 from DDE Lab</a></li>
+      <li><a href="http://www.lirmm.fr/~chaumont/SteganalysisWithDeepLearning/CroppedBossBase-1.0-256x256_cover.rar" target="_blank">Cropped BOSSBase from LIRMM Lab</a></li>
+      <li><a href="http://dde.binghamton.edu/download/ImageDB/BURST_sorted.zip" target="_blank">BURST_sorted from DDE Lab</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="8-an-overview-to-the-next-post">8. An overview to the next post</h3>
+
+<p>Steganography has undergone a significant evolution during the last two centuries through various
+techniques and methods that serve to increase the undetectability of the stego object. The misuse of
+steganography by hackers and terrorists requires the existence of an antidote. This antidote is steganalysis which aims to detect the existence of a stego object in a first step and to extract the secret message in a second step. A Brief introduction to steganalysis in the “<a href="../Introduction-Steganalysis"><strong>next post</strong></a>” .</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li><a href="https://en.wikipedia.org/wiki/Steganography" target="_blank">https://en.wikipedia.org/wiki/Steganography</a></li>
+  <li><a href="https://www.hindawi.com/journals/scn/2017/5397082/#B22" target="_blank">https://www.hindawi.com/journals/scn/2017/5397082/#B22</a></li>
+  <li><a href="https://securelist.com/steganography-in-contemporary-cyberattacks/79276/" target="_blank">https://securelist.com/steganography-in-contemporary-cyberattacks/79276/</a></li>
+  <li><a href="http://www.cse.wustl.edu/~jain/cse571-09/ftp/stegano/index.html" target="_blank">http://www.cse.wustl.edu/~jain/cse571-09/ftp/stegano/index.html</a></li>
+  <li><a href="http://www.ijarcs.info/index.php/Ijarcs/article/viewFile/2483/2471" target="_blank">http://www.ijarcs.info/index.php/Ijarcs/article/viewFile/2483/2471</a></li>
+  <li><a href="https://www.researchgate.net/profile/Osamah_Al-qershi/publication/292310394_Image_Steganography_Techniques_An_Overview/links/57f642ac08ae8da3ce574080/Image-Steganography-Techniques-An-Overview.pdf" target="_blank">Image Steganography Techniques: An Overview</a></li>
+  <li><a href="https://www.mathworks.com/help/vision/ref/psnr.html" target="_blank">https://www.mathworks.com/help/vision/ref/psnr.html</a></li>
+  <li><a href="https://www.mathworks.com/help/images/ref/ssim.html?s_tid=doc_ta" target="_blank">https://www.mathworks.com/help/images/ref/ssim.html?s_tid=doc_ta</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Structural_similarity" target="_blank">https://en.wikipedia.org/wiki/Structural_similarity</a></li>
+  <li><a href="https://arxiv.org/ftp/arxiv/papers/1202/1202.5289.pdf" target="_blank">Development Trends in Steganography</a></li>
+  <li><a href="https://pdfs.semanticscholar.org/f60e/d5f0f609956d0715659c823506feea036a31.pdf" target="_blank">Steganography and Steganalysis in Digital Multimedia: Hype or Hallelujah?</a></li>
+</ol>
+
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-115439306-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+    </div>
+
+    
+<hr>
+
+<aside id="comments" class="disqus">
+  <h3><i class="icon icon-comments-o"></i> Comments</h3>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'https://rabi3elbeji.github.io/blog/2018/Introduction-Steganography/';
+      this.page.identifier = '/blog/2018/Introduction-Steganography';
+    };
+    (function() {
+      var d = document,
+      s = d.createElement('script');
+      s.src = 'https://rabi3elbeji.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</aside>
+
+
+  </div>
+
+</article>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="social">
+  <li><a href="https://github.com/rabi3elbeji" target="_blank"><i class="icon icon-github"></i></a></li>
+  <li><a href="https://twitter.com/rbelbeji" target="_blank"><i class="icon icon-twitter"></i></a></li>
+  <li><a href="https://linkedin.com/in/rabii-elbeji-6432348a" target="_blank"><i class="icon icon-linkedin"></i></a></li>
+</ul>
+
+    <p class="txt-medium-gray">
+      <small>&copy;2020 Rabii ELBEJI. All rights reserved.</small>
+    </p>
+  </div>
+</footer>
+
+
+</body>
+</html>
