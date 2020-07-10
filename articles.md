@@ -8,10 +8,9 @@ published: true
 ### 2018
 
  <center><h4 id="An Improved CNN Steganalysis Architecture Based on “Catalyst Kernels” and Transfer Learning"> #3 - An Improved CNN Steganalysis Architecture Based on “Catalyst Kernels” and Transfer Learning </h4></center>
-
  <br/>
 
-- **Published in** : [_Economy. Emerging Technologies and Business Innovation pp 119-128_](https://link.springer.com/chapter/10.1007/978-3-319-97749-2_9)
+- **Published in** : [Economy. Emerging Technologies and Business Innovation, May 3-5, 2018, Brest, France](https://link.springer.com/chapter/10.1007/978-3-319-97749-2_9)
 - **Authors** : Rabii ElBeji, Marwa Saidi, Houcemeddine Hermassi, Rhouma Rhouma
 - **Project code**: [SteganalysisCNN](https://github.com/rabi3elbeji/SteganalysisCNN)
 
@@ -27,7 +26,7 @@ In recent years, the interest of using model architectures based on the Convolut
 
 <br/>
 
-- **Published in** : [Image Analysis and Recognition pp 341-348](https://link.springer.com/chapter/10.1007/978-3-319-41501-7_39)
+- **Published in** : [Image Analysis and Recognition, July 13-15, 2016, Póvoa de Varzim, Portugal](https://link.springer.com/chapter/10.1007/978-3-319-41501-7_39)
 - **Authors** : Nadra Ben Romdhane, Hazar Mliki, Rabii El Beji, Mohamed Hammami
 
 <ul style="font-size:14px">
@@ -42,7 +41,7 @@ the SVM classifier. As shown experimentally, compared to leading methods from th
 
 <br/>
 
-- **Published in** : [Image Analysis and Recognition pp 341-348](http://ieeexplore.ieee.org/document/7535410/?reload=true)
+- **Published in** : [IEEE Intelligent Vehicles Symposium (IV), June 19-22, 2016, Gothenburg, Sweden](http://ieeexplore.ieee.org/document/7535410/?reload=true)
 - **Authors** : Nadra Ben Romdhane, Hazar Mliki, Rabii El Beji, Mohamed Hammami
 
 <ul style="font-size:14px">

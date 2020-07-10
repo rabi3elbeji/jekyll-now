@@ -59,7 +59,7 @@ published: true
 
                             <div class="timeline-content right">
                                 <h2 style="font-family:verdana; font-size: 16px;">April 2018 - July 2020.</h2>
-                                <h2  style="font-family:verdana; font-size: 20px;">R&D Engineer @ OpenBee</h2>
+                                <h2  style="font-family:verdana; font-size: 20px;">R&D Engineer at OpenBee</h2>
                                 <p>
 
                                 <ul>
@@ -91,7 +91,7 @@ published: true
                             <!-- Content from timeline box and position (right or left)-->
                             <div class="timeline-content left">
                               <h2 style="font-family:verdana; font-size: 16px;">September 2017 - Present.</h2>
-                              <h2  style="font-family:verdana; font-size: 20px;">PhD Student @ RISC Lab @ ENIT</h2>
+                              <h2  style="font-family:verdana; font-size: 20px;">PhD Student at RISC Lab ENIT</h2>
                               <p>
                               <ul>
                               I am working on the creation of new universal methods and approaches of Steganalysis based on deep learning models and machine learning techniques. My main research interests are steganography, steganalysis, deep learning, transfer learning and machine learning.
@@ -113,7 +113,7 @@ published: true
                             <div class="timeline-content right">
 
                             <h2 style="font-family:verdana; font-size: 16px;">January 2016 - September 2017.</h2>
-                            <h2  style="font-family:verdana; font-size: 20px;">Software Engineer @ IBIL Training Center</h2>
+                            <h2  style="font-family:verdana; font-size: 20px;">Software Engineer at HOHWebSolutions</h2>
                             <p>
                               <ul>
                                  <li>Build a website for managing data from different resources (Databases, Excel files).</li>
@@ -140,7 +140,7 @@ published: true
 
                             <div class="timeline-content left">
                               <h2 style="font-family:verdana; font-size: 16px;">December 2015 - June 2016.</h2>
-                              <h2  style="font-family:verdana; font-size: 20px;">Android App development Trainer @ HOHWebSolutions</h2>
+                              <h2  style="font-family:verdana; font-size: 20px;">Android App development Trainer at IBIL Training Center</h2>
                               <p>
                                 <ul>
                                  <li>Build a website for managing data from different resources (Databases, Excel files).</li>
@@ -169,7 +169,7 @@ published: true
                             <div class="timeline-content right">
 
                             <h2 style="font-family:verdana; font-size: 16px;">February 2015 - September 2015.</h2>
-                            <h2  style="font-family:verdana; font-size: 20px;">End of Studies Project @ ENIG</h2>
+                            <h2  style="font-family:verdana; font-size: 20px;">End of Studies Project at ENIG</h2>
                             <p>
                               <ul>
                               <li>Develop a real-time detection, classification, and tracking methods for red-edges road signs plus a comparative study with two other recent methods.</li>
@@ -198,7 +198,7 @@ published: true
                             <div class="timeline-content left">
 
                             <h2 style="font-family:verdana; font-size: 16px;">February 2015 - September 2015.</h2>
-                            <h2  style="font-family:verdana; font-size: 20px;">Engineer Internship @ Tunisie Télécom</h2>
+                            <h2  style="font-family:verdana; font-size: 20px;">Engineer Internship at Tunisie Télécom</h2>
                             <p>
                               <ul>
                               Design and develop a quality of service (QoS) mobile application to measure the quality of the 2G/3G network with another desktop application for monitoring.
@@ -225,7 +225,7 @@ published: true
                             <div class="timeline-content right">
 
                             <h2 style="font-family:verdana; font-size: 16px;">February 2014 - April 2014.</h2>
-                            <h2  style="font-family:verdana; font-size: 20px;">Final Year project. @ ENIG</h2>
+                            <h2  style="font-family:verdana; font-size: 20px;">Final Year project at ENIG</h2>
                             <p>
                               <ul>
                                 Design and Develop a software application to recognize the letters of the alphabet from the user's hand gesture to help deaf-mutes learn faster and easier.
