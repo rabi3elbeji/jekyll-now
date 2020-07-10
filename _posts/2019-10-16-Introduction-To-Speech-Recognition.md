@@ -20,12 +20,14 @@ toc: true
 
 <style>
 .lettrine {
+	color: #292929;
 	float: left;
-   text-shadow:3px 3px 3px silver;  
-   font-size: 4em;  
-   line-height: 80%;
-   margin:-.1em 0px;
-   padding-right: .1em
+  font-size:60px;
+	font-weight:bold;
+	line-height:40px;
+	padding-top:4px;
+  padding-right:4px;
+	font-family: arial;
 }
 </style>
 <span class="lettrine">M</span>ost likely, you use one of these wizards to perform an action or just to have fun with it. These wizards go through several steps to perform an action from your request. In this post, we will discuss the evolution of speech recognition throw time. We will then detail the model and the recent speech recognition applications.
